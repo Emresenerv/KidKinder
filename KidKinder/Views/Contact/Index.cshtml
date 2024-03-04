@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = null;
+}
+
+<
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead","Default")
+
+<body>
+
+    @Html.Action("PartialNavbar", "Default")
+
+    <!-- Header Start -->
+    @Html.Action("ContactHeaderPartial", "Contact")
+    <!-- Header End -->
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5">
+                    <span class="px-2">İletişime Geçmek İçin</span>
+                </p>
+                <h1 class="mb-4">Herhangi Bir Soru için Bize Ulaşın</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 mb-5">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text"
+                                       class="form-control"
+                                       id="name"
+                                       placeholder="Adınız Soyadınız"
+                                       required="required"
+                                       data-validation-required-message="Lütfe Adını Soyadınızı giriniz." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       placeholder="Email Adresiniz"
+                                       required="required"
+                                       data-validation-required-message="Lütfen Mail Adresinizi giriniz." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text"
+                                       class="form-control"
+                                       id="subject"
+                                       placeholder="Konu"
+                                       required="required"
+                                       data-validation-required-message="Lütfen Konuyu yazınız" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control"
+                                          rows="6"
+                                          id="message"
+                                          placeholder="Mesajınız"
+                                          required="required"
+                                          data-validation-required-message="Lütfen Mesajınızı yazınız."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary py-2 px-4"
+                                        type="submit"
+                                        id="sendMessageButton">
+                                   Gönder
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                @Html.Action("ContactAddressPartial", "Contact")
+                @Html.Action("ContactMaps", "Contact")
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    @Html.Action("PartialFooter", "Default")
+    @Html.Action("PartialScripts", "Default")
+
+</body>
+</html>
+
+

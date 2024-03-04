@@ -1,0 +1,58 @@
+﻿@model KidKinder.Entities.Lesson
+@{
+    ViewBag.Title = "CreateLesson";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- Page-header start -->
+<!-- Page-header end -->
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+
+            <!-- Page body start -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Yeni Ders Girişi</h5>
+                                <span>Dersler ile ilgili verileri eksiz olarak giriniz.</span>
+                            </div>
+                            <div class="card-block">
+
+                                <form method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Dersin Adı </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="LessonName" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Dersin Günü</label>
+                                        <div class="col-sm-10">
+                                            @Html.DropDownListFor(x => x.LessonDate, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Dersin Saati</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="LessonDateTime" class="form-control">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">Dersi Kaydet</button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

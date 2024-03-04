@@ -1,0 +1,197 @@
+﻿@using KidKinder.Entities
+@model List<Teacher>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/font-awesome-n.min.css">
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-stat-card">
+                            <div class="card-block">
+                                <div class="row align-items-center b-b-default">
+                                    <div class="col-sm-6 b-r-default p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <i class="fa fa-graduation-cap text-c-purple f-24"></i>
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.DilEgitimCount</h5>
+                                                <p class="text-muted m-b-0">Dil Öğretmeni</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://img.freepik.com/free-vector/teacher-with-blackboard-design_1214-222.jpg?t=st=1709374787~exp=1709378387~hmac=c685ff1037636a75c07e8385f0c50a9599da4048ca81b51954fe9108d8b0ef45&w=826" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.Teacher</h5>
+                                                <p class="text-muted m-b-0">Öğretmenlerimiz</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://img.freepik.com/free-vector/education-infographics_23-2147490248.jpg?t=st=1709378792~exp=1709382392~hmac=ef9744660edb556ed2f36fbf0cf4b06b135bac34c5ca92091d493ec2bd28b593&w=826" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.Branch</h5>
+                                                <p class="text-muted m-b-0">Branşlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://img.freepik.com/free-vector/interior-classroom_1308-26552.jpg?t=st=1709378396~exp=1709381996~hmac=e50f896b4a3710d1d31903f82faac2f18cf34ae8ab213447a631501e80287be1&w=1060" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.ClassRoom</h5>
+                                                <p class="text-muted m-b-0">Sınıflar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-stat-card">
+                            <div class="card-block">
+                                <div class="row align-items-center b-b-default">
+                                    <div class="col-sm-6 b-r-default p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://img.freepik.com/premium-photo/flat-illustration-dollar-sign-coin-web_810970-295.jpg?w=826" width="50" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.AvgPrice</h5>
+                                                <p class="text-muted m-b-0">Ortalama Fiyat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://cdn-icons-png.freepik.com/512/2720/2720641.png" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.Service</h5>
+                                                <p class="text-muted m-b-0">Hizmetler</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 p-b-20 p-t-20 b-r-default">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT96cBORRLH_jjwB0nL6H415qzni-oMfnxRSA&usqp=CAU" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>@ViewBag.Contact</h5>
+                                                <p class="text-muted m-b-0">Mesajlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 p-b-20 p-t-20">
+                                        <div class="row align-items-center text-center">
+                                            <div class="col-4 p-r-0">
+                                                <img src="https://img.freepik.com/free-vector/academic-excellence-illustration_24877-52355.jpg?t=st=1709378584~exp=1709382184~hmac=a457eacf6fe123b2e568f728c2d293beb504313ce68b77df1ef27157889993d5&w=826" width="40" height="40" />
+                                            </div>
+                                            <div class="col-8 p-l-0">
+                                                <h5>65</h5>
+                                                <p class="text-muted m-b-0">Kayıt Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card mat-clr-stat-card text-white green ">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-green">
+                                        <i class="fas fa-star mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>@ViewBag.Testimonial</h5>
+                                        <p class="m-b-0">Değerlendirmeler</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mat-clr-stat-card text-white blue">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-3 text-center bg-c-blue">
+                                        <i class="fas fa-trophy mat-icon f-24"></i>
+                                    </div>
+                                    <div class="col-9 cst-cont">
+                                        <h5>@ViewBag.subs</h5>
+                                        <p class="m-b-0">Aboneler</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h5>Öğretmenlerimiz</h5>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                        <li><i class="fa fa-trash close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="table-responsive">
+                                    <table class="table table-hover m-b-0 without-header">
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-inline-block align-middle">
+                                                            <img src="@item.ImageUrl" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <div class="d-inline-block">
+                                                                <h6>@item.NameSurname</h6>
+                                                                <p class="text-muted m-b-0">@item.Branch.Name</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @Html.Action("PartialSocial", "Dashboard")
+                  
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

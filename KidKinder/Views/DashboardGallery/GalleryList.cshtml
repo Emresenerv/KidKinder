@@ -1,0 +1,60 @@
+﻿@model List<KidKinder.Entities.Gallery>
+@{
+    ViewBag.Title = "GalleryList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Galeri</h5>
+                        <span>Galeri ile iligli işlemler</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table table-hover">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Görsel</th>
+                                      
+                                        <th>Aktif Yap</th>
+                                        <th>PasifYap</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td></td>
+                                            <td><img src="@item.ImageUrl" width="300" height="150" /></td>
+                                            
+                                            <td><a href="/DashboardGallery/ActiveGallery/@item.GalleryId" class="btn btn-success">Aktif Yap</a></td>
+                                            <td><a href="/DashboardGallery/PassiveGallery/@item.GalleryId" class="btn btn-dark">Pasif Yap</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/DashboardGallery/CreateGallery/" class="btn btn-primary">Yeni Resim Ekle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
